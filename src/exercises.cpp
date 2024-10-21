@@ -12,7 +12,8 @@ Can write on two lines
 */
 void exercise_1()
 {
-    // Your code here
+    std::cout << "My first C-program\n";
+    std::cout << "Can write on two lines\n";    
 }
 
 /*
@@ -26,7 +27,8 @@ Area of the triangle: 10.000000
 */
 void exercise_2(double base, double height)
 {
-    // Your code here
+    std::cout << std::fixed << std::setprecision(6); // Set output format
+    std::cout << "Area of the triangle: " << (base * height) / 2 << std::endl; // Print area
 }
 
 /*
@@ -36,10 +38,10 @@ Use a reference table for operator precedence if you are not sure about the orde
 void exercise_3()
 {
     // Write your answers here
-    int answer1 = 0;
-    int answer2 = 0;
+    int answer1 = 11;
+    int answer2 = 1;
     int answer3 = 0;
-    int answer4 = 0;
+    int answer4 = 1;
 
     // The print statements below will all print 1 if your answers are correct
     std::cout << (answer1 == (-3 + 4 * 5 - 6)) << std::endl;
@@ -64,8 +66,18 @@ Hint: use the '?' operator. You can define the function in one line.
 */
 void exercise_4(int x)
 {
-    // Your code here
+    if (x == 0) {
+        std::cout << "Dividing by zero is not supported" << std::endl;
+    } else {
+        int result = 10 / x; // Perform integer division
+        if (10 % x == 0) { // Check if result is an integer
+            std::cout << "10 divided by " << x << " is " << result << std::endl; // Print without decimal places
+        } else {
+            std::cout << "10 divided by " << x << " is " << std::fixed << std::setprecision(6) << static_cast<double>(10) / x << std::endl; // Print with decimal places
+        }
+    }
 }
+
 
 /*
 Predict the value of each expression in the print statements below by following the operations performed on the variables x,y and z.
@@ -74,11 +86,11 @@ Use a reference table for operator precedence if you are not sure about the orde
 void exercise_5()
 {
     // Write your answers here
-    int answer1 = 0;
-    int answer2 = 0;
-    int answer3 = 0;
-    int answer4 = 0;
-    int answer5 = 0;
+    int answer1 = 10;
+    int answer2 = 40;
+    int answer3 = 4;
+    int answer4 = 4;
+    int answer5 = 1;
 
     int x, y, z;
     x = 2;
@@ -103,9 +115,9 @@ Use a reference table for operator precedence if you are not sure about the orde
 void exercise_6()
 {
     // Write your answers here
-    int answer1 = 0;
-    int answer2 = 0;
-    int answer3 = 0;
+    int answer1 = 3;
+    int answer2 = 2;
+    int answer3 = 4;
 
     int x, y, z;
     x = y = z = 1;
